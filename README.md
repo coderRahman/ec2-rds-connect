@@ -1,4 +1,4 @@
-# create ec2 and rds instance and connect them
+# Create ec2 and rds instance and connect them
 
 # Overview
 
@@ -6,14 +6,14 @@ The figure below shows what our final architecture will look like. We will creat
 
 ![My Image](images/main_pic.png)
 
-#  create a vpc 
+#  Create a vpc 
 ## VPCs and subnets
 
 A virtual private cloud (VPC) is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS Cloud. You can specify an IP address range for the VPC, add subnets, add gateways, and associate security groups.
 
 A subnet is a range of IP addresses in your VPC. You launch AWS resources, such as Amazon EC2 instances, into your subnets. You can connect a subnet to the internet, other VPCs, and your own data centers, and route traffic to and from your subnets using route tables.
 
-## search vpc in aws search box, then navigate to vpc dashboard (To know about vpc search in google)
+## Search vpc in aws search box, then navigate to vpc dashboard (To know about vpc search in google)
 
 ![My Image](images/vpc.png)
 
@@ -44,7 +44,10 @@ it will be used in rds instance
 
 ![My Image](images/private_subnet.png)
 
-# navigate to route table for the previously created public subnet. change from  main route table to the custom route table.
+# Navigate to route table for the previously created public subnet. click custom route table and edit subnet association
+
+![My Image](images/edit_subnet_1.png)
+![My Image](images/edit_subnet_2.png)
 
 # Create a security group for the EC2 instance to be provisioned in the public us-east-1a subnet.
 
@@ -70,7 +73,11 @@ select previously created security group.
 ![My Image](images/ec2_2.png)
 
 
-# create database
+# Create database
+
+select previously crreated vpc
+public access -> no
+choose existing security group and select mysql-rds-sg that created previously.
 
 ![My Image](images/mysql_1.png)
 
@@ -82,6 +89,13 @@ select previously created security group.
 
 ![My Image](images/mysql_5.png)
 
-![My Image](images/msyql_6.png)
+![My Image](images/mysql_6.png)
 
-# connect ec2 using ssh
+# Connect ec2 using ssh
+
+![My Image](images/connect_ssh.png)
+
+# Install mysql-client in ec2
+# Connect to mysql instance 
+
+![My Image](images/connect_mysql.png)
