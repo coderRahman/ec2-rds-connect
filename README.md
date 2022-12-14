@@ -9,7 +9,7 @@ The figure below shows what our final architecture will look like. We will creat
 #  Create a vpc 
 ## VPCs and subnets
 
-A virtual private cloud (VPC) is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS Cloud. You can specify an IP address range for the VPC, add subnets, add gateways, and associate security groups.
+A virtual private cloud (VPC) is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS Cloud. You can specify an IP address range for the VPC, add subnets, add gateways, and associate security groups.<br/>
 
 A subnet is a range of IP addresses in your VPC. You launch AWS resources, such as Amazon EC2 instances, into your subnets. You can connect a subnet to the internet, other VPCs, and your own data centers, and route traffic to and from your subnets using route tables.
 
@@ -63,21 +63,21 @@ Authorize inbound tcp traffic from the public subnet over port 3306.
 
 # Launce a Ec2 instance
 
-Edit network setting. 
-select previously created vpc and public subnet.
-enable auto assign public ip
-select previously created security group.
+Edit network setting. <br/>
+select previously created vpc and public subnet.<br/>
+enable auto assign public ip<br/>
+select previously created security group.<br/>
 
-![My Image](images/ec2_1.png)
+![My Image](images/ec2_1.png) <br/>
 
 ![My Image](images/ec2_2.png)
 
 
 # Create database
 
-select previously crreated vpc
-public access -> no
-choose existing security group and select mysql-rds-sg that created previously.
+select previously crreated vpc <br/>
+public access -> no <br/>
+choose existing security group and select mysql-rds-sg that created previously.<br/>
 
 ![My Image](images/mysql_1.png)
 
