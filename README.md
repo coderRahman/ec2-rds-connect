@@ -92,7 +92,7 @@ choose existing security group and select mysql-rds-sg that created previously.<
 ![My Image](images/mysql_6.png)
 
 # Connect ec2 using ssh
-
+ firstly change key file permission to 400
 ![My Image](images/connect_ssh.png)
 
 # Install mysql-client in ec2
